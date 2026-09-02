@@ -1,0 +1,275 @@
+/**
+ * The Future Corridor — Animation Foundation
+ * Performance-first, compositor-only (transform & opacity) reusable animation utilities
+ * Fully compliant with prefers-reduced-motion: reduce
+ */
+
+/* ==========================================================================
+   1. KEYFRAMES
+   ========================================================================== */
+@keyframes fadeInKeyframe {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUpKeyframe {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeftKeyframe {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRightKeyframe {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleInKeyframe {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ==========================================================================
+   2. REUSABLE ANIMATION TOKENS & UTILITIES
+   ========================================================================== */
+.animate-fade-in {
+  animation: fadeInKeyframe 0.6s var(--ease-smooth) forwards;
+}
+
+.animate-fade-up {
+  animation: fadeUpKeyframe 0.7s var(--ease-smooth) forwards;
+}
+
+.animate-slide-left {
+  animation: slideLeftKeyframe 0.7s var(--ease-smooth) forwards;
+}
+
+.animate-slide-right {
+  animation: slideRightKeyframe 0.7s var(--ease-smooth) forwards;
+}
+
+.animate-scale-in {
+  animation: scaleInKeyframe 0.65s var(--ease-smooth) forwards;
+}
+
+/* Stagger Delay Classes */
+.stagger-1 { animation-delay: 80ms; }
+.stagger-2 { animation-delay: 160ms; }
+.stagger-3 { animation-delay: 240ms; }
+.stagger-4 { animation-delay: 320ms; }
+.stagger-5 { animation-delay: 400ms; }
+.stagger-6 { animation-delay: 480ms; }
+
+/* ==========================================================================
+   3. SCROLL-TRIGGERED REVEAL CLASSES (Used by IntersectionObserver)
+   ========================================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.65s var(--ease-smooth),
+              transform 0.65s var(--ease-smooth);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-slide-left {
+  opacity: 0;
+  transform: translateX(24px);
+  transition: opacity 0.65s var(--ease-smooth),
+              transform 0.65s var(--ease-smooth);
+}
+
+.reveal-slide-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-slide-right {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 0.65s var(--ease-smooth),
+              transform 0.65s var(--ease-smooth);
+}
+
+.reveal-slide-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.97);
+  transition: opacity 0.65s var(--ease-smooth),
+              transform 0.65s var(--ease-smooth);
+}
+
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger Transition Delays for Observer */
+.reveal.stagger-1, .reveal-slide-left.stagger-1, .reveal-slide-right.stagger-1, .reveal-scale.stagger-1 { transition-delay: 80ms; }
+.reveal.stagger-2, .reveal-slide-left.stagger-2, .reveal-slide-right.stagger-2, .reveal-scale.stagger-2 { transition-delay: 160ms; }
+.reveal.stagger-3, .reveal-slide-left.stagger-3, .reveal-slide-right.stagger-3, .reveal-scale.stagger-3 { transition-delay: 240ms; }
+.reveal.stagger-4, .reveal-slide-left.stagger-4, .reveal-slide-right.stagger-4, .reveal-scale.stagger-4 { transition-delay: 320ms; }
+.reveal.stagger-5, .reveal-slide-left.stagger-5, .reveal-slide-right.stagger-5, .reveal-scale.stagger-5 { transition-delay: 400ms; }
+.reveal.stagger-6, .reveal-slide-left.stagger-6, .reveal-slide-right.stagger-6, .reveal-scale.stagger-6 { transition-delay: 480ms; }
+
+/* Micro-Interaction Transitions */
+.transition-subtle {
+  transition: transform var(--duration-fast) var(--ease-smooth),
+              box-shadow var(--duration-fast) var(--ease-smooth),
+              border-color var(--duration-fast) ease;
+}
+
+/* ==========================================================================
+   3b. CUSTOM CURSOR: FLOATING BOOK
+   ========================================================================== */
+
+/* Hide the native cursor on interactive surfaces once the book cursor is active */
+.has-cursor-book {
+  cursor: none;
+}
+.has-cursor-book a,
+.has-cursor-book button,
+.has-cursor-book .btn,
+.has-cursor-book [role="button"] {
+  cursor: none;
+}
+
+.cursor-book {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 28px;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.25s ease, width 0.2s ease, height 0.2s ease;
+  will-change: transform;
+}
+
+.cursor-book.is-active {
+  opacity: 1;
+  animation: cursorBookFloat 2.6s ease-in-out infinite;
+}
+
+.cursor-book__svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 3px 6px rgba(18, 26, 41, 0.25));
+}
+
+.cursor-book__page {
+  fill: var(--color-gold-400, #D9A441);
+  stroke: var(--color-academy-primary, #1F3B57);
+  stroke-width: 1.4;
+  transform-origin: 32px 30px;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), fill 0.25s ease;
+}
+
+.cursor-book__page--left {
+  fill: #FDF8ED;
+}
+
+.cursor-book__page--right {
+  fill: #FFFFFF;
+}
+
+.cursor-book__spine {
+  stroke: var(--color-academy-primary, #1F3B57);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+/* Gentle bob while idle-following the pointer */
+@keyframes cursorBookFloat {
+  0%, 100% { filter: drop-shadow(0 3px 6px rgba(18, 26, 41, 0.25)); }
+  50% { filter: drop-shadow(0 6px 10px rgba(18, 26, 41, 0.3)); }
+}
+
+/* Pages flip open when hovering links, buttons & cards */
+.cursor-book.is-hover .cursor-book__page--left {
+  transform: rotateY(18deg) translateX(-2px);
+}
+.cursor-book.is-hover .cursor-book__page--right {
+  transform: rotateY(-18deg) translateX(2px);
+}
+.cursor-book.is-hover {
+  width: 40px;
+  height: 34px;
+}
+
+/* Quick "page turn" pulse on click */
+.cursor-book.is-clicking .cursor-book__page--left {
+  transform: rotateY(65deg) translateX(-4px);
+}
+.cursor-book.is-clicking .cursor-book__page--right {
+  transform: rotateY(-30deg) translateX(3px);
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-book { display: none; }
+  .has-cursor-book { cursor: auto; }
+}
+
+/* ==========================================================================
+   4. ACCESSIBILITY: REDUCED MOTION OVERRIDE
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .reveal-slide-left,
+  .reveal-slide-right,
+  .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

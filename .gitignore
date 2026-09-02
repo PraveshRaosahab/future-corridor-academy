@@ -1,0 +1,10 @@
+# Dependencies
+node_modules/
+
+# Build output (Vercel builds this automatically — no need to commit it)
+dist/
+
+# Editor/OS junk
+.DS_Store
+.vscode/
+*.log

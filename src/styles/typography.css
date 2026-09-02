@@ -1,0 +1,187 @@
+/**
+ * The Future Corridor — Typography System
+ * Font Pairing: Playfair Display (Serif Headings) + Inter (Sans-Serif Body & UI)
+ */
+
+/* ==========================================================================
+   HEADINGS & DISPLAY STYLES
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6,
+.heading-display,
+.heading-1,
+.heading-2,
+.heading-3 {
+  font-family: var(--font-serif);
+  color: var(--color-text-primary);
+  margin: 0;
+  text-wrap: balance;
+}
+
+.heading-display {
+  font-size: var(--text-display);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+h1, .heading-1 {
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+h2, .heading-2 {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+  letter-spacing: -0.01em;
+}
+
+h3, .heading-3 {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+}
+
+h4 {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+}
+
+h5 {
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+  color: var(--color-text-primary);
+}
+
+h6 {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-normal);
+  color: var(--color-text-primary);
+}
+
+/* ==========================================================================
+   BODY & PARAGRAPH SCALES
+   ========================================================================== */
+p {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+  text-wrap: pretty;
+  margin: 0;
+}
+
+.text-body-large,
+.lead-paragraph {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-secondary);
+  font-weight: var(--weight-regular);
+}
+
+.text-body {
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-text-secondary);
+}
+
+.text-body-small {
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-text-secondary);
+}
+
+.text-caption {
+  font-size: var(--text-xs);
+  line-height: var(--leading-snug);
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   EYEBROW / KICKER LABELS
+   ========================================================================== */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.eyebrow--gold {
+  color: var(--color-gold-600);
+}
+
+.eyebrow--academy {
+  color: var(--color-academy-primary);
+}
+
+/* Eyebrow ornamental bar */
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 1.5px;
+  background-color: currentColor;
+  opacity: 0.6;
+}
+
+.eyebrow--no-bar::before {
+  display: none;
+}
+
+/* ==========================================================================
+   NAVIGATION & UI TYPOGRAPHY
+   ========================================================================== */
+.nav-link-text {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-text-primary);
+  transition: color var(--duration-fast) ease;
+}
+
+.btn-text {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+/* ==========================================================================
+   EDITORIAL & DECORATIVE ACCENTS
+   ========================================================================== */
+.font-italic {
+  font-style: italic;
+}
+
+.serif-accent {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: var(--weight-regular);
+}
+
+.text-charcoal { color: var(--color-text-primary); }
+.text-gold { color: var(--color-gold-600); }
+.text-academy { color: var(--color-academy-primary); }
+.text-muted { color: var(--color-text-muted); }
+.text-inverse { color: var(--color-text-inverse); }
+
+/* Alignment */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }

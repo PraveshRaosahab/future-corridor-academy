@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Apply saved / system theme before first paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var theme = (stored === 'dark' || stored === 'light')
+          ? stored
+          : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>The Future Corridor | IELTS, Spoken English & Teacher Training Institute in Ludhiana</title>
+  <meta name="description" content="The Future Corridor in Ludhiana offers IELTS, Spoken English, and English Grammar classes (Online & Offline) along with skill-based courses — NTT, PTT, ECCE, and Nanny training. Located at Dholewal Chowk, GT Road, Ludhiana." />
+  <meta name="keywords" content="The Future Corridor, IELTS Ludhiana, Spoken English Ludhiana, English Grammar classes, NTT course Ludhiana, PTT course Punjab, ECCE training, Nanny course Ludhiana, Dholewal Chowk institute" />
+  <meta name="author" content="The Future Corridor" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#121A29" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="business.business" />
+  <meta property="og:title" content="The Future Corridor | IELTS, Spoken English & Teacher Training Institute" />
+  <meta property="og:description" content="Building Skills, Shaping Futures. IELTS, Spoken English & English Grammar classes alongside NTT, PTT, ECCE and Nanny training in Ludhiana, Punjab." />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="The Future Corridor" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Future Corridor | IELTS, Spoken English & Teacher Training Institute" />
+  <meta name="twitter:description" content="Building Skills, Shaping Futures. IELTS, Spoken English & English Grammar classes alongside NTT, PTT, ECCE and Nanny training in Ludhiana." />
+
+  <!-- Google Fonts Preconnect & Stylesheet (Playfair Display + Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/src/styles/index.css" />
+
+  <!-- Structured Data: LocalBusiness / EducationalOrganization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "The Future Corridor",
+    "description": "Institute offering IELTS, Spoken English, and English Grammar classes along with skill-based courses — NTT, PTT, ECCE, and Nanny training. Online and Offline classes available.",
+    "telephone": "+918591549897",
+    "logo": "/images/brand/logo.png",
+    "openingHours": "Mo-Sa 09:00-19:00",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "BXV/984, Dholewal Chowk, Near Gurudwara Ferumaan, GT Road",
+      "addressLocality": "Ludhiana",
+      "addressRegion": "Punjab",
+      "postalCode": "141003",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Root Application Container -->
+  <div id="app">
+    <header id="site-header" role="banner"></header>
+    <main id="main-content" role="main"></main>
+    <footer id="site-footer" role="contentinfo"></footer>
+  </div>
+
+  <!-- Application Entry Script -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

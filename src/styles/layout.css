@@ -1,0 +1,202 @@
+/**
+ * The Future Corridor — Layout & Grid System
+ * Mobile-first responsive containers, section patterns, and flexible grid layouts
+ */
+
+/* ==========================================================================
+   CONTAINER SYSTEM
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+.container--wide {
+  max-width: var(--container-wide);
+}
+
+/* ==========================================================================
+   SECTION PATTERNS & BACKGROUNDS
+   ========================================================================== */
+.section {
+  padding-block: var(--space-section);
+  position: relative;
+}
+
+.section--sm {
+  padding-block: var(--space-lg);
+}
+
+.section--cream {
+  background-color: var(--color-bg-alt);
+}
+
+.section--alt {
+  background-color: var(--color-bg-alt);
+}
+
+.section--white {
+  background-color: var(--color-white);
+}
+
+.section--academy-subtle {
+  background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-academy-light) 100%);
+}
+
+.section--charcoal {
+  background-color: var(--color-charcoal-900);
+  color: var(--color-text-inverse);
+}
+
+.section--charcoal h1,
+.section--charcoal h2,
+.section--charcoal h3,
+.section--charcoal h4,
+.section--charcoal h5,
+.section--charcoal .heading-display,
+.section--charcoal .heading-1,
+.section--charcoal .heading-2,
+.section--charcoal .heading-3 {
+  color: var(--color-white);
+}
+
+.section--charcoal p,
+.section--charcoal .text-body,
+.section--charcoal .text-body-large {
+  color: var(--color-text-inverse-muted);
+}
+
+/* ==========================================================================
+   SECTION HEADERS
+   ========================================================================== */
+.section-header {
+  margin-bottom: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.section-header--center {
+  text-align: center;
+  align-items: center;
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+.section-header__title {
+  margin-top: var(--space-3xs);
+  margin-bottom: var(--space-2xs);
+}
+
+.section-header__desc {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  max-width: 580px;
+}
+
+/* ==========================================================================
+   FLEXBOX UTILITIES
+   ========================================================================== */
+.flex { display: flex; }
+.flex-col { display: flex; flex-direction: column; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.flex-wrap { flex-wrap: wrap; }
+
+.gap-2xs { gap: var(--space-2xs); }
+.gap-xs { gap: var(--space-xs); }
+.gap-sm { gap: var(--space-sm); }
+.gap-md { gap: var(--space-md); }
+.gap-lg { gap: var(--space-lg); }
+.gap-xl { gap: var(--space-xl); }
+
+/* ==========================================================================
+   RESPONSIVE GRID LAYOUTS (Mobile-First)
+   ========================================================================== */
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+/* 2-Column Grid */
+.grid--2col {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid--2col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+/* 3-Column Grid */
+.grid--3col {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .grid--3col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid--3col {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+/* 4-Column Grid */
+.grid--4col {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 540px) {
+  .grid--4col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid--4col {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+  }
+}
+
+/* Responsive Auto-Fit Cards */
+.grid-auto-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .grid-auto-cards {
+    gap: var(--space-lg);
+  }
+}
+
+/* Visual Separators */
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border);
+  margin-block: var(--space-lg);
+}
+
+.divider--subtle {
+  background-color: var(--color-border-subtle);
+}

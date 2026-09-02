@@ -1,0 +1,240 @@
+/**
+ * The Future Corridor — Visual Design System Tokens
+ * Master Design Tokens for The Future Corridor Institute Website
+ */
+
+:root {
+  /* ==========================================================================
+     1. COLOR SYSTEM
+     Sophisticated neutral foundation with balanced champagne, rose, and slate accents
+     ========================================================================== */
+
+  /* Neutral Foundation: Charcoal to Pure White */
+  --color-charcoal-900: #111317; /* Primary Headings & Dark Sections */
+  --color-charcoal-800: #1B1E24; /* Deep Neutral UI */
+  --color-charcoal-700: #2A2E37; /* Card Headers in Dark */
+  
+  --color-gray-700: #4B4F58;    /* High-contrast Body Text */
+  --color-gray-600: #636873;    /* Standard Secondary Body Text */
+  --color-gray-500: #888D98;    /* Muted Labels & Hints */
+  --color-gray-300: #D8D6CF;    /* Borders Hover */
+  --color-gray-200: #E7E4DC;    /* Standard Borders */
+  --color-gray-100: #F3F1EB;    /* Subtle Separators & Alt Sections */
+  
+  --color-cream-50: #FCFBF8;     /* Base Page Background (Warm Ivory) */
+  --color-cream-100: #F7F4EC;    /* Section Accent / Ivory Tint */
+  --color-cream-200: #EEE9DC;    /* Container Alt Tint */
+  
+  --color-white: #FFFFFF;
+  --color-white-translucent-80: rgba(255, 255, 255, 0.82);
+  --color-white-translucent-50: rgba(255, 255, 255, 0.50);
+
+  /* Mobile Drawer Backdrop (theme-aware) */
+  --color-drawer-bg: rgba(253, 251, 247, 0.98);
+
+  /* Glassmorphism surfaces */
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-bg-strong: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-blur: 20px;
+  --glass-shadow: 0 8px 32px rgba(31, 41, 68, 0.10), 0 1.5px 3px rgba(31, 41, 68, 0.06);
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+
+  /* Primary Semantic Colors */
+  --color-bg: var(--color-cream-50);
+  --color-bg-alt: var(--color-cream-100);
+  --color-surface: var(--color-white);
+  --color-surface-elevated: var(--color-white);
+  
+  --color-text-primary: var(--color-charcoal-900);
+  --color-text-secondary: var(--color-gray-600);
+  --color-text-muted: var(--color-gray-500);
+  --color-text-inverse: var(--color-white);
+  --color-text-inverse-muted: rgba(255, 255, 255, 0.72);
+  
+  --color-border: var(--color-gray-200);
+  --color-border-subtle: #ECE9E1;
+  --color-border-hover: var(--color-gray-300);
+
+  /* Brand Accents: Soft Champagne Gold (Shared Prestige & CTAs) */
+  --color-gold-400: #D8B775;
+  --color-gold-500: #C5A059;
+  --color-gold-600: #A68138;
+  --color-gold-light: #FAF5EB;
+  --color-gold-border: #E8D7B3;
+
+  /* Academy Accent: Scholastic Deep Slate / Sapphire */
+  --color-academy-primary: #244B7E;
+  --color-academy-hover: #19375F;
+  --color-academy-light: #F0F4FA;
+  --color-academy-border: #D1DDF0;
+  --color-academy-text: #153359;
+  --color-academy-badge-bg: #E6EFF9;
+
+  /* Placeholder System Indicator */
+  --color-placeholder-bg: #FFF9EC;
+  --color-placeholder-text: #825E0A;
+  --color-placeholder-border: #E8D196;
+
+  /* ==========================================================================
+     2. TYPOGRAPHY SYSTEM
+     Playfair Display (Editorial Display/Headings) + Inter (Crisp Body/UI)
+     ========================================================================== */
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Fluid Type Scale (clamp based on viewport) */
+  --text-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);      /* 12px - 13px */
+  --text-sm: clamp(0.84375rem, 0.81rem + 0.18vw, 0.9375rem);   /* 13.5px - 15px */
+  --text-base: clamp(0.96875rem, 0.93rem + 0.22vw, 1.0625rem); /* 15.5px - 17px */
+  --text-md: clamp(1.125rem, 1.06rem + 0.3vw, 1.25rem);        /* 18px - 20px */
+  --text-lg: clamp(1.28125rem, 1.18rem + 0.5vw, 1.4375rem);    /* 20.5px - 23px */
+  --text-xl: clamp(1.46875rem, 1.32rem + 0.7vw, 1.8125rem);    /* 23.5px - 29px */
+  --text-2xl: clamp(1.8125rem, 1.58rem + 1.15vw, 2.375rem);    /* 29px - 38px */
+  --text-3xl: clamp(2.1875rem, 1.85rem + 1.7vw, 3.125rem);     /* 35px - 50px */
+  --text-display: clamp(2.625rem, 2.15rem + 2.4vw, 4.25rem);   /* 42px - 68px */
+
+  /* Line Heights */
+  --leading-tight: 1.14;
+  --leading-snug: 1.28;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.72;
+
+  /* Font Weights */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Letter Spacing */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.03em;
+  --tracking-wider: 0.08em;
+  --tracking-widest: 0.14em;
+
+  /* ==========================================================================
+     3. SPACING & CONTAINER SYSTEM
+     ========================================================================== */
+  --space-3xs: clamp(0.2rem, 0.18rem + 0.1vw, 0.25rem);    /* 3-4px */
+  --space-2xs: clamp(0.375rem, 0.32rem + 0.2vw, 0.5rem);   /* 6-8px */
+  --space-xs: clamp(0.625rem, 0.55rem + 0.35vw, 0.875rem);  /* 10-14px */
+  --space-sm: clamp(0.875rem, 0.78rem + 0.45vw, 1.25rem);   /* 14-20px */
+  --space-md: clamp(1.25rem, 1.08rem + 0.8vw, 1.875rem);    /* 20-30px */
+  --space-lg: clamp(1.625rem, 1.4rem + 1.1vw, 2.25rem);      /* 26-36px */
+  --space-xl: clamp(1.875rem, 1.6rem + 1.4vw, 2.75rem);      /* 30-44px */
+  --space-2xl: clamp(2.25rem, 1.9rem + 1.8vw, 3.25rem);      /* 36-52px */
+  --space-section: clamp(1.5rem, 1.3rem + 1.2vw, 2.5rem);    /* 24-40px */
+
+  /* Containers */
+  --container-max: 1240px;
+  --container-narrow: 840px;
+  --container-wide: 1360px;
+  --container-pad: clamp(1.25rem, 0.8rem + 2vw, 2.5rem);
+
+  /* ==========================================================================
+     4. RESTRAINED BORDER RADIUS SYSTEM
+     Avoid overly rounded everywhere; crisp and refined
+     ========================================================================== */
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* ==========================================================================
+     5. SHADOW SYSTEM
+     Natural, multi-layered subtle elevation
+     ========================================================================== */
+  --shadow-subtle: 0 1px 2px rgba(17, 19, 23, 0.03), 0 2px 4px rgba(17, 19, 23, 0.02);
+  --shadow-card: 0 2px 8px rgba(17, 19, 23, 0.04), 0 1px 2px rgba(17, 19, 23, 0.03);
+  --shadow-card-hover: 0 12px 28px rgba(17, 19, 23, 0.07), 0 3px 8px rgba(17, 19, 23, 0.03);
+  --shadow-elevated: 0 16px 36px rgba(17, 19, 23, 0.09), 0 4px 12px rgba(17, 19, 23, 0.04);
+  --shadow-popover: 0 20px 48px rgba(17, 19, 23, 0.12), 0 8px 16px rgba(17, 19, 23, 0.05);
+
+  --shadow-academy-card: 0 8px 24px rgba(36, 75, 126, 0.08);
+
+  /* ==========================================================================
+     6. TRANSITIONS & TIMING
+     ========================================================================== */
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --duration-fast: 150ms;
+  --duration-normal: 240ms;
+  --duration-medium: 380ms;
+  --duration-slow: 600ms;
+
+  /* ==========================================================================
+     7. Z-INDEX LAYERS
+     ========================================================================== */
+  --z-base: 1;
+  --z-card-hover: 5;
+  --z-sticky: 100;
+  --z-overlay: 400;
+  --z-modal: 500;
+  --z-toast: 1000;
+}
+
+/* ==========================================================================
+   8. DARK THEME OVERRIDES
+   Activated via [data-theme="dark"] on <html>. Reuses the existing charcoal/
+   cream palette (already used for the site's dark accent sections) so dark
+   mode stays visually consistent with the rest of the brand.
+   ========================================================================== */
+:root[data-theme="dark"] {
+  --color-bg: var(--color-charcoal-900);
+  --color-bg-alt: var(--color-charcoal-800);
+  --color-surface: #1B1E24;
+  --color-surface-elevated: #232730;
+
+  --color-text-primary: var(--color-cream-50);
+  --color-text-secondary: #C7C4BB;
+  --color-text-muted: #8B8D93;
+  --color-text-inverse: var(--color-charcoal-900);
+  --color-text-inverse-muted: rgba(17, 19, 23, 0.72);
+
+  --color-border: #2E323B;
+  --color-border-subtle: #262A31;
+  --color-border-hover: #3C4048;
+
+  --color-white-translucent-80: rgba(17, 19, 23, 0.82);
+  --color-white-translucent-50: rgba(17, 19, 23, 0.50);
+  --color-drawer-bg: rgba(17, 19, 23, 0.98);
+
+  --glass-bg: rgba(38, 42, 50, 0.55);
+  --glass-bg-strong: rgba(38, 42, 50, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.09);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 1.5px 3px rgba(0, 0, 0, 0.3);
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  --color-gold-light: rgba(197, 160, 89, 0.14);
+
+  --color-academy-primary: #6C9BD6;
+  --color-academy-hover: #8FB2E0;
+  --color-academy-light: rgba(108, 155, 214, 0.14);
+  --color-academy-border: rgba(108, 155, 214, 0.35);
+  --color-academy-text: #AFCBEE;
+  --color-academy-badge-bg: rgba(108, 155, 214, 0.16);
+
+  --color-placeholder-bg: rgba(216, 165, 43, 0.12);
+  --color-placeholder-text: #E8C179;
+  --color-placeholder-border: rgba(216, 165, 43, 0.35);
+
+  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 4px rgba(0, 0, 0, 0.25);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 12px 28px rgba(0, 0, 0, 0.5), 0 3px 8px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 16px 36px rgba(0, 0, 0, 0.55), 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-popover: 0 20px 48px rgba(0, 0, 0, 0.6), 0 8px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* Smooth, low-cost transition whenever the theme is toggled */
+* {
+  transition: background-color var(--duration-normal) ease,
+              border-color var(--duration-normal) ease,
+              color var(--duration-normal) ease,
+              box-shadow var(--duration-normal) ease;
+}
