@@ -8,6 +8,11 @@ import { siteConfig } from '../data/site.js';
 export function renderHero() {
   return `
     <section class="hero" id="hero">
+      <!-- Decorative 3D layer (Three.js). Populated lazily by initHero3D();
+           stays empty/invisible on reduced-motion, small screens, or if WebGL
+           is unavailable, so the hero always looks complete without it. -->
+      <div class="hero__3d" id="hero-3d" aria-hidden="true"></div>
+
       <div class="container hero__container">
         <!-- Main Headline -->
         <div class="hero__header">

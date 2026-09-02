@@ -15,6 +15,7 @@ import { renderFooter } from './components/Footer.js';
 import { initScrollAnimations } from './utils/scroll-animations.js';
 import { initCursorBook } from './utils/cursor-book.js';
 import { initThemeToggle } from './utils/theme.js';
+import { initHero3D } from './utils/hero-3d.js';
 
 console.log(`[The Future Corridor] Initializing ${siteConfig.name} Landing Experience...`);
 
@@ -51,12 +52,16 @@ function initApp() {
   // 5. Initialize the animated book cursor
   initCursorBook();
 
+  // 5a. Initialize the decorative 3D hero background (lazy-loaded, skips
+  //     itself gracefully on reduced motion / small screens / no WebGL)
+  initHero3D();
+
   // 5b. Wire up the enquiry form submission (Web3Forms)
   initEnquiryForm();
 
   // 6. Smooth scrolling enhancement for local anchors
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
       if (targetId && targetId !== '#') {
         const targetElement = document.querySelector(targetId);
