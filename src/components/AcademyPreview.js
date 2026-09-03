@@ -39,7 +39,7 @@ export function renderAcademyPreview() {
         </div>
 
         ${academyData.courseGroups.map(group => `
-          <div style="margin-bottom: var(--space-xl);">
+          <div id="courses-${group.id}" style="margin-bottom: var(--space-xl); scroll-margin-top: 90px;">
             <div class="section-header" style="margin-bottom: var(--space-md);">
               <h3 class="heading-3">${group.title}</h3>
               <p class="section-header__desc" style="margin: 0;">${group.description}</p>

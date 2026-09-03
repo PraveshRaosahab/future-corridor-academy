@@ -60,7 +60,7 @@ export const academyData = {
           code: 'PTT',
           name: 'Primary Teacher Training',
           summary: 'Teaching methodologies, curriculum planning, and instructional techniques for primary school educators.',
-          duration: '[Duration - 6 to 12 months]',
+          duration: '[Duration - 1 year]',
           mode: 'Online / Offline'
         },
         {
@@ -68,7 +68,7 @@ export const academyData = {
           code: 'Nanny',
           name: 'Nanny Course',
           summary: 'Practical child caregiving, safety protocols, and home management skills for professional nannies.',
-          duration: '[Duration - 3 to 6 months]',
+          duration: '[Duration - 6 months to 1 year]',
           mode: 'Online / Offline'
         },
         {

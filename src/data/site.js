@@ -3,7 +3,7 @@
  * All business details are centralized here for easy maintenance.
  */
 
-const MAP_QUERY = 'BXV/984 Dholewal Chowk Near Gurudwara Ferumaan GT Road Ludhiana Punjab 141003';
+const MAP_QUERY = 'The Future Corridor,BXV/984 Dholewal Chowk Near Gurudwara Ferumaan GT Road Ludhiana Punjab 141003';
 
 export const siteConfig = {
   name: 'The Future Corridor',

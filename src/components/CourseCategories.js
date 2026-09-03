@@ -49,7 +49,7 @@ export function renderCourseCategories() {
               </div>
 
               <div class="dual-card__footer">
-                <a href="#courses-preview" class="btn btn--academy btn--full">
+                <a href="#courses-language" class="btn btn--academy btn--full">
                   Explore Language Courses
                 </a>
               </div>
@@ -85,7 +85,7 @@ export function renderCourseCategories() {
               </div>
 
               <div class="dual-card__footer">
-                <a href="#courses-preview" class="btn btn--academy btn--full">
+                <a href="#courses-skill-based" class="btn btn--academy btn--full">
                   Explore Skill Based Courses
                 </a>
               </div>
