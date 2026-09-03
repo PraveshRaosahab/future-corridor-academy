@@ -68,7 +68,7 @@ export const academyData = {
           code: 'Nanny',
           name: 'Nanny Course',
           summary: 'Practical child caregiving, safety protocols, and home management skills for professional nannies.',
-          duration: '[Duration - 6 months to 1 year]',
+          duration: '[Duration - 6 months to 12 months]',
           mode: 'Online / Offline'
         },
         {
