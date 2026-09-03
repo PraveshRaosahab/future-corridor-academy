@@ -4,6 +4,9 @@
  */
 
 const MAP_QUERY = 'The Future Corridor,BXV/984 Dholewal Chowk Near Gurudwara Ferumaan GT Road Ludhiana Punjab 141003';
+// Precise pin coordinates provided for the institute's location
+const MAP_LAT = '30.8945638';
+const MAP_LNG = '75.868158';
 
 export const siteConfig = {
   name: 'The Future Corridor',
@@ -32,8 +35,8 @@ export const siteConfig = {
     state: 'Punjab',
     pincode: '141003',
     fullFormatted: 'BXV/984, Dholewal Chowk, Near Gurudwara Ferumaan, GT Road, Ludhiana, Punjab — 141003',
-    googleMapsSearchUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAP_QUERY)}`,
-    googleMapsEmbedUrl: `https://www.google.com/maps?q=${encodeURIComponent(MAP_QUERY)}&output=embed`
+    googleMapsSearchUrl: `https://www.google.com/maps/search/?api=1&query=${MAP_LAT},${MAP_LNG}`,
+    googleMapsEmbedUrl: `https://www.google.com/maps?q=${MAP_LAT},${MAP_LNG}&output=embed`
   },
 
   meta: {
