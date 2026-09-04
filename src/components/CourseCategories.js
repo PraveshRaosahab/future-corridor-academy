@@ -25,7 +25,7 @@ export function renderCourseCategories() {
             <div class="dual-card__banner">
               <img 
                 src="/images/hero/hero_academy.jpg" 
-                alt="Language Courses at The Future Corridor" 
+                alt="Language Courses at The Next Corridor" 
                 class="dual-card__img"
                 loading="lazy"
                 width="600"
@@ -61,7 +61,7 @@ export function renderCourseCategories() {
             <div class="dual-card__banner">
               <img 
                 src="/images/hero/hero_academy.jpg" 
-                alt="Skill Based Teacher Training Courses at The Future Corridor" 
+                alt="Skill Based Teacher Training Courses at The Next Corridor" 
                 class="dual-card__img"
                 loading="lazy"
                 width="600"

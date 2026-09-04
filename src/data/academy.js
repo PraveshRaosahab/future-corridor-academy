@@ -5,7 +5,7 @@
  */
 
 export const academyData = {
-  instituteName: 'The Future Corridor',
+  instituteName: 'The Next Corridor',
   category: 'Language Training & Teacher Training Institute',
   headline: 'Build Your Future With The Right Skills',
   subheadline: 'From IELTS and Spoken English to professional teacher & childcare training — every course is available Online and Offline.',

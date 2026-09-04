@@ -9,7 +9,7 @@ const MAP_LAT = '30.8945638';
 const MAP_LNG = '75.868158';
 
 export const siteConfig = {
-  name: 'The Future Corridor',
+  name: 'The Next Corridor',
   tagline: 'Building Skills, Shaping Futures',
   subtitle: 'Professional Institute for IELTS, Spoken English & Skill-Based Teacher Training in Ludhiana',
   logo: '/images/brand/logo.png',
@@ -40,10 +40,10 @@ export const siteConfig = {
   },
 
   meta: {
-    title: 'The Future Corridor | IELTS, Spoken English & Teacher Training Institute in Ludhiana',
-    description: 'The Future Corridor in Ludhiana offers IELTS, Spoken English, and English Grammar classes (Online & Offline) along with skill-based courses — NTT, PTT, ECCE, and Nanny training.',
-    keywords: 'The Future Corridor, IELTS Ludhiana, Spoken English Ludhiana, English Grammar classes, NTT course Ludhiana, PTT course Punjab, ECCE training, Nanny course Ludhiana, Dholewal Chowk institute, Teacher Training Ludhiana',
-    author: 'The Future Corridor',
+    title: 'The Next Corridor | IELTS, Spoken English & Teacher Training Institute in Ludhiana',
+    description: 'The Next Corridor in Ludhiana offers IELTS, Spoken English, and English Grammar classes (Online & Offline) along with skill-based courses — NTT, PTT, ECCE, and Nanny training.',
+    keywords: 'The Next Corridor, IELTS Ludhiana, Spoken English Ludhiana, English Grammar classes, NTT course Ludhiana, PTT course Punjab, ECCE training, Nanny course Ludhiana, Dholewal Chowk institute, Teacher Training Ludhiana',
+    author: 'The Next Corridor',
     location: 'Ludhiana, Punjab, India'
   }
 };

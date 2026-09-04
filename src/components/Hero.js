@@ -51,7 +51,7 @@ export function renderHero() {
             <div class="split-card__media">
               <img 
                 src="/images/hero/student-nanny.jpg" 
-                alt="Graduate holding Nanny course certificate at The Future Corridor" 
+                alt="Graduate holding Nanny course certificate at The Next Corridor" 
                 class="split-card__img"
                 loading="eager"
                 fetchpriority="high"
@@ -68,7 +68,7 @@ export function renderHero() {
             <div class="split-card__media">
               <img 
                 src="/images/hero/student-certificates.jpg" 
-                alt="Graduate holding multiple course certificates from The Future Corridor" 
+                alt="Graduate holding multiple course certificates from The Next Corridor" 
                 class="split-card__img"
                 loading="eager"
                 width="600"
@@ -84,7 +84,7 @@ export function renderHero() {
             <div class="split-card__media">
               <img 
                 src="/images/hero/student-ptt.jpg" 
-                alt="Graduate holding PTT course certificate at The Future Corridor" 
+                alt="Graduate holding PTT course certificate at The Next Corridor" 
                 class="split-card__img"
                 loading="eager"
                 width="600"

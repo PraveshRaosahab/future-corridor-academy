@@ -3,7 +3,7 @@
  */
 
 export const navigationData = {
-  brand: 'The Future Corridor',
+  brand: 'The Next Corridor',
   tagline: 'Institute of Learning',
 
   links: [

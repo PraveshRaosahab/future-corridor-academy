@@ -17,7 +17,7 @@ import { initCursorBook } from './utils/cursor-book.js';
 import { initThemeToggle } from './utils/theme.js';
 import { initHero3D } from './utils/hero-3d.js';
 
-console.log(`[The Future Corridor] Initializing ${siteConfig.name} Landing Experience...`);
+console.log(`[The Next Corridor] Initializing ${siteConfig.name} Landing Experience...`);
 
 const headerEl = document.getElementById('site-header');
 const mainEl = document.getElementById('main-content');

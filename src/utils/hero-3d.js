@@ -38,7 +38,7 @@ export async function initHero3D() {
     try {
         THREE = await import('three');
     } catch (err) {
-        console.warn('[The Future Corridor] 3D hero skipped — could not load three.js', err);
+        console.warn('[The Next Corridor] 3D hero skipped — could not load three.js', err);
         return;
     }
 
