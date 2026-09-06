@@ -94,6 +94,9 @@
   margin-inline: auto;
   margin-bottom: var(--space-xs);
   object-fit: contain;
+  max-width: 240px;
+  width: 100%;
+  height: auto;
 }
 
 .hero__meta {

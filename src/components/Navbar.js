@@ -12,7 +12,7 @@ export function renderNavbar() {
       <div class="container navbar__inner">
         <!-- Brand -->
         <a href="#hero" class="navbar__brand" aria-label="${siteConfig.name} Home">
-          <img src="${siteConfig.logo}" alt="${siteConfig.name} Logo" class="navbar__logo" width="44" height="44" />
+          <img src="${siteConfig.logo}" alt="${siteConfig.name} Logo" class="navbar__logo" width="68" height="46" />
           <span class="navbar__brand-text">
             <span class="navbar__brand-name">${siteConfig.name}</span>
             <span class="navbar__brand-tagline">${navigationData.tagline}</span>

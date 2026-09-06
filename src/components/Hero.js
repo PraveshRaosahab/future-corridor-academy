@@ -16,7 +16,7 @@ export function renderHero() {
       <div class="container hero__container">
         <!-- Main Headline -->
         <div class="hero__header">
-          <img src="${siteConfig.logo}" alt="${siteConfig.name} Logo" class="hero__logo animate-scale-in" width="120" height="120" />
+          <img src="${siteConfig.logo}" alt="${siteConfig.name} Logo" class="hero__logo animate-scale-in" width="240" height="165" />
           <span class="eyebrow eyebrow--gold animate-fade-up">Institute of Learning, Ludhiana</span>
           <h1 class="hero__title animate-fade-up stagger-1">
             ${siteConfig.name}
