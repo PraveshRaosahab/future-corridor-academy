@@ -1,9 +1,9 @@
 /**
- * The Future Corridor - Core Site & Contact Information
+ * The Next Corridor - Core Site & Contact Information
  * All business details are centralized here for easy maintenance.
  */
 
-const MAP_QUERY = 'The Future Corridor,BXV/984 Dholewal Chowk Near Gurudwara Ferumaan GT Road Ludhiana Punjab 141003';
+const MAP_QUERY = 'The Next Corridor,BXV/984 Dholewal Chowk Near Gurudwara Ferumaan GT Road Ludhiana Punjab 141003';
 // Precise pin coordinates provided for the institute's location
 const MAP_LAT = '30.8945638';
 const MAP_LNG = '75.868158';
