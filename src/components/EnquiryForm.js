@@ -102,7 +102,7 @@ export function initEnquiryForm() {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    if (siteConfig.web3formsAccessKey === 'YOUR_WEB3FORMS_ACCESS_KEY_HERE') {
+    if (siteConfig.web3formsAccessKey === '62039ba5-a65f-492d-ab62-da125cf2c11c') {
       statusEl.textContent = 'Form is not fully set up yet — please call us directly at ' + siteConfig.phoneDisplay + '.';
       statusEl.className = 'enquiry-form__status is-error';
       return;
