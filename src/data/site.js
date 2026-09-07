@@ -23,9 +23,7 @@ export const siteConfig = {
   },
 
   // Get a free access key at https://web3forms.com (no signup cost, no backend needed).
-  // Replace the placeholder below with your real key before publishing the site,
-  // otherwise the enquiry form will not be able to send submissions.
-  web3formsAccessKey: '62039ba5-a65f-492d-ab62-da125cf2c11c',
+  web3formsAccessKey: '81c850c4-e983-446e-9ab1-8b18f9d4fe5b',
 
   address: {
     building: 'BXV/984',
