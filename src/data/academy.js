@@ -52,7 +52,7 @@ export const academyData = {
           code: 'NTT',
           name: 'Nursery Teacher Training',
           summary: 'Pedagogical training focused on nursery teaching methods, child psychology, and classroom management.',
-          duration: '[Duration - 6 to 12 months]',
+          duration: '[Duration - 1 to 2 years]',
           mode: 'Online / Offline'
         },
         {
