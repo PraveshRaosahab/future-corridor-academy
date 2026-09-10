@@ -11,6 +11,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -21,6 +22,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -32,6 +34,7 @@
     opacity: 0;
     transform: translateX(24px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -43,6 +46,7 @@
     opacity: 0;
     transform: translateX(-24px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -54,6 +58,7 @@
     opacity: 0;
     transform: scale(0.97);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -84,12 +89,29 @@
 }
 
 /* Stagger Delay Classes */
-.stagger-1 { animation-delay: 80ms; }
-.stagger-2 { animation-delay: 160ms; }
-.stagger-3 { animation-delay: 240ms; }
-.stagger-4 { animation-delay: 320ms; }
-.stagger-5 { animation-delay: 400ms; }
-.stagger-6 { animation-delay: 480ms; }
+.stagger-1 {
+  animation-delay: 80ms;
+}
+
+.stagger-2 {
+  animation-delay: 160ms;
+}
+
+.stagger-3 {
+  animation-delay: 240ms;
+}
+
+.stagger-4 {
+  animation-delay: 320ms;
+}
+
+.stagger-5 {
+  animation-delay: 400ms;
+}
+
+.stagger-6 {
+  animation-delay: 480ms;
+}
 
 /* ==========================================================================
    3. SCROLL-TRIGGERED REVEAL CLASSES (Used by IntersectionObserver)
@@ -98,7 +120,7 @@
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.65s var(--ease-smooth),
-              transform 0.65s var(--ease-smooth);
+    transform 0.65s var(--ease-smooth);
   will-change: opacity, transform;
 }
 
@@ -111,7 +133,7 @@
   opacity: 0;
   transform: translateX(24px);
   transition: opacity 0.65s var(--ease-smooth),
-              transform 0.65s var(--ease-smooth);
+    transform 0.65s var(--ease-smooth);
 }
 
 .reveal-slide-left.is-visible {
@@ -123,7 +145,7 @@
   opacity: 0;
   transform: translateX(-24px);
   transition: opacity 0.65s var(--ease-smooth),
-              transform 0.65s var(--ease-smooth);
+    transform 0.65s var(--ease-smooth);
 }
 
 .reveal-slide-right.is-visible {
@@ -135,7 +157,7 @@
   opacity: 0;
   transform: scale(0.97);
   transition: opacity 0.65s var(--ease-smooth),
-              transform 0.65s var(--ease-smooth);
+    transform 0.65s var(--ease-smooth);
 }
 
 .reveal-scale.is-visible {
@@ -144,18 +166,53 @@
 }
 
 /* Stagger Transition Delays for Observer */
-.reveal.stagger-1, .reveal-slide-left.stagger-1, .reveal-slide-right.stagger-1, .reveal-scale.stagger-1 { transition-delay: 80ms; }
-.reveal.stagger-2, .reveal-slide-left.stagger-2, .reveal-slide-right.stagger-2, .reveal-scale.stagger-2 { transition-delay: 160ms; }
-.reveal.stagger-3, .reveal-slide-left.stagger-3, .reveal-slide-right.stagger-3, .reveal-scale.stagger-3 { transition-delay: 240ms; }
-.reveal.stagger-4, .reveal-slide-left.stagger-4, .reveal-slide-right.stagger-4, .reveal-scale.stagger-4 { transition-delay: 320ms; }
-.reveal.stagger-5, .reveal-slide-left.stagger-5, .reveal-slide-right.stagger-5, .reveal-scale.stagger-5 { transition-delay: 400ms; }
-.reveal.stagger-6, .reveal-slide-left.stagger-6, .reveal-slide-right.stagger-6, .reveal-scale.stagger-6 { transition-delay: 480ms; }
+.reveal.stagger-1,
+.reveal-slide-left.stagger-1,
+.reveal-slide-right.stagger-1,
+.reveal-scale.stagger-1 {
+  transition-delay: 80ms;
+}
+
+.reveal.stagger-2,
+.reveal-slide-left.stagger-2,
+.reveal-slide-right.stagger-2,
+.reveal-scale.stagger-2 {
+  transition-delay: 160ms;
+}
+
+.reveal.stagger-3,
+.reveal-slide-left.stagger-3,
+.reveal-slide-right.stagger-3,
+.reveal-scale.stagger-3 {
+  transition-delay: 240ms;
+}
+
+.reveal.stagger-4,
+.reveal-slide-left.stagger-4,
+.reveal-slide-right.stagger-4,
+.reveal-scale.stagger-4 {
+  transition-delay: 320ms;
+}
+
+.reveal.stagger-5,
+.reveal-slide-left.stagger-5,
+.reveal-slide-right.stagger-5,
+.reveal-scale.stagger-5 {
+  transition-delay: 400ms;
+}
+
+.reveal.stagger-6,
+.reveal-slide-left.stagger-6,
+.reveal-slide-right.stagger-6,
+.reveal-scale.stagger-6 {
+  transition-delay: 480ms;
+}
 
 /* Micro-Interaction Transitions */
 .transition-subtle {
   transition: transform var(--duration-fast) var(--ease-smooth),
-              box-shadow var(--duration-fast) var(--ease-smooth),
-              border-color var(--duration-fast) ease;
+    box-shadow var(--duration-fast) var(--ease-smooth),
+    border-color var(--duration-fast) ease;
 }
 
 /* ==========================================================================
@@ -166,11 +223,36 @@
 .has-cursor-book {
   cursor: none;
 }
+
 .has-cursor-book a,
 .has-cursor-book button,
 .has-cursor-book .btn,
-.has-cursor-book [role="button"] {
+.has-cursor-book [role="button"],
+.has-cursor-book input,
+.has-cursor-book textarea,
+.has-cursor-book select,
+.has-cursor-book .enquiry-form__select,
+.has-cursor-book .contact-cta__map-overlay {
   cursor: none;
+}
+
+/* Embedded map is a cross-origin iframe: the page can't reach into it to
+   hide its native cursor, so an invisible overlay sits on top to catch the
+   pointer instead (only while the book cursor is active — otherwise the
+   map stays fully interactive, e.g. on touch devices). */
+.contact-cta__map {
+  position: relative;
+}
+
+.contact-cta__map-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.has-cursor-book .contact-cta__map-overlay {
+  pointer-events: auto;
 }
 
 .cursor-book {
@@ -222,17 +304,26 @@
 
 /* Gentle bob while idle-following the pointer */
 @keyframes cursorBookFloat {
-  0%, 100% { filter: drop-shadow(0 3px 6px rgba(18, 26, 41, 0.25)); }
-  50% { filter: drop-shadow(0 6px 10px rgba(18, 26, 41, 0.3)); }
+
+  0%,
+  100% {
+    filter: drop-shadow(0 3px 6px rgba(18, 26, 41, 0.25));
+  }
+
+  50% {
+    filter: drop-shadow(0 6px 10px rgba(18, 26, 41, 0.3));
+  }
 }
 
 /* Pages flip open when hovering links, buttons & cards */
 .cursor-book.is-hover .cursor-book__page--left {
   transform: rotateY(18deg) translateX(-2px);
 }
+
 .cursor-book.is-hover .cursor-book__page--right {
   transform: rotateY(-18deg) translateX(2px);
 }
+
 .cursor-book.is-hover {
   width: 40px;
   height: 34px;
@@ -242,19 +333,27 @@
 .cursor-book.is-clicking .cursor-book__page--left {
   transform: rotateY(65deg) translateX(-4px);
 }
+
 .cursor-book.is-clicking .cursor-book__page--right {
   transform: rotateY(-30deg) translateX(3px);
 }
 
-@media (hover: none), (pointer: coarse) {
-  .cursor-book { display: none; }
-  .has-cursor-book { cursor: auto; }
+@media (hover: none),
+(pointer: coarse) {
+  .cursor-book {
+    display: none;
+  }
+
+  .has-cursor-book {
+    cursor: auto;
+  }
 }
 
 /* ==========================================================================
    4. ACCESSIBILITY: REDUCED MOTION OVERRIDE
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {

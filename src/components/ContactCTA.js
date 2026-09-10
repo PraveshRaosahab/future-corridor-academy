@@ -72,6 +72,7 @@ export function renderContactCTA() {
                 referrerpolicy="no-referrer-when-downgrade"
                 title="${siteConfig.name} Location Map"
               ></iframe>
+              <div class="contact-cta__map-overlay" aria-hidden="true"></div>
             </div>
           </div>
 
