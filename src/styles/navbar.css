@@ -166,22 +166,21 @@
 .theme-toggle svg {
   width: 18px;
   height: 18px;
+}
+
+.theme-toggle__sun {
   display: block;
 }
 
 .theme-toggle__moon {
-  display: block;
-}
-
-.theme-toggle__sun {
-  display: none;
-}
-
-:root[data-theme="dark"] .theme-toggle__moon {
   display: none;
 }
 
 :root[data-theme="dark"] .theme-toggle__sun {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle__moon {
   display: block;
 }
 
